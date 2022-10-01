@@ -16,6 +16,11 @@ today = datetime.date.today()
 now = datetime.datetime.now()
 
 body = f"""
+##
+
+
+
+##
 User = {os.getlogin()}
 Date = {today.strftime('%d/%m/%Y')} 
 Time = {now.strftime('%H:%M:%S')}
